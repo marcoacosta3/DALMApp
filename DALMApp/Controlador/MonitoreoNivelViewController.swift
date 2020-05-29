@@ -7,28 +7,38 @@
 //
 
 import UIKit
+import Alamofire
 
 class MonitoreoNivelViewController: UIViewController {
     
     @IBOutlet weak var foodLevel: UIButton!
     @IBOutlet weak var waterLevel: UIButton!
     
+    var usuario: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        foodLevel.layer.cornerRadius = foodLevel.frame.size.height / 3
+        waterLevel.layer.cornerRadius = waterLevel.frame.size.height / 3
+        print(usuario + "Niveles")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if let identifier = segue.identifier, identifier == "MonitoreoNivelToNivelAgua" {
+            guard let nivelAguaVC = segue.destination as? NivelAguaViewController else {
+                return
+            }
+            nivelAguaVC.usuario = self.usuario
+        }
+        
+        if let identifier = segue.identifier, identifier == "MonitoreoNivelToNivelAlimento" {
+            guard let nivelAlimentoVC = segue.destination as? NivelAlimentoViewController else {
+                return
+            }
+            nivelAlimentoVC.usuario = self.usuario
+        }
     }
-    */
 
 }

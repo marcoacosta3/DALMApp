@@ -21,7 +21,10 @@ class HeaderScheduleCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        leftHeaderScheduleView.layer.cornerRadius = leftHeaderScheduleView.frame.size.height / 5
+        middleHeaderScheduleView.layer.cornerRadius = middleHeaderScheduleView.frame.size.height / 5
+        rightHeaderScheduleView.layer.cornerRadius = rightHeaderScheduleView.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

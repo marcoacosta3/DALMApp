@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+struct DataSheet {
+    let fieldName: String
+    let fieldInformation: String
+}
+
+struct ScheduleInformation {
+    let day: String
+    let hour: String
+    let portionFood: String
+}
+
+struct HeaderSchedule {
+    let dayH: String
+    let hourH: String
+    let portionFoodH: String
+}

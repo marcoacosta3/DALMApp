@@ -31,9 +31,18 @@
 		6A3C714E248102930073B37A /* HeaderScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C714C248102930073B37A /* HeaderScheduleCell.xib */; };
 		6A3C7151248104050073B37A /* InformationScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C714F248104050073B37A /* InformationScheduleCell.swift */; };
 		6A3C7152248104050073B37A /* InformationScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C7150248104050073B37A /* InformationScheduleCell.xib */; };
+		6A4E9E3B2481251B002C5BF9 /* Horario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E3A2481251B002C5BF9 /* Horario.swift */; };
+		6A4E9E3D24812576002C5BF9 /* ModificarHorario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E3C24812576002C5BF9 /* ModificarHorario.swift */; };
+		6A4E9E3F248125B0002C5BF9 /* MonitoreoNivel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E3E248125B0002C5BF9 /* MonitoreoNivel.swift */; };
+		6A4E9E4124812617002C5BF9 /* PerfilMascota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E4024812617002C5BF9 /* PerfilMascota.swift */; };
+		6A4E9E432481264D002C5BF9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E422481264D002C5BF9 /* Usuario.swift */; };
+		6A4E9E452481273E002C5BF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E9E442481273E002C5BF9 /* Constants.swift */; };
+		A12196429EE0FEC55DE9F156 /* libPods-DALMApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9C34559B4F5FA6263B76A8 /* libPods-DALMApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A9C34559B4F5FA6263B76A8 /* libPods-DALMApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DALMApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ACA615A49A300F5628CBF76 /* Pods-DALMApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALMApp.debug.xcconfig"; path = "Target Support Files/Pods-DALMApp/Pods-DALMApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6A3C71152480B8620073B37A /* DALMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DALMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3C71182480B8620073B37A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A3C711A2480B8620073B37A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +69,13 @@
 		6A3C714C248102930073B37A /* HeaderScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderScheduleCell.xib; sourceTree = "<group>"; };
 		6A3C714F248104050073B37A /* InformationScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScheduleCell.swift; sourceTree = "<group>"; };
 		6A3C7150248104050073B37A /* InformationScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationScheduleCell.xib; sourceTree = "<group>"; };
+		6A4E9E3A2481251B002C5BF9 /* Horario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horario.swift; sourceTree = "<group>"; };
+		6A4E9E3C24812576002C5BF9 /* ModificarHorario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModificarHorario.swift; sourceTree = "<group>"; };
+		6A4E9E3E248125B0002C5BF9 /* MonitoreoNivel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoreoNivel.swift; sourceTree = "<group>"; };
+		6A4E9E4024812617002C5BF9 /* PerfilMascota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilMascota.swift; sourceTree = "<group>"; };
+		6A4E9E422481264D002C5BF9 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		6A4E9E442481273E002C5BF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A9B338925D8E84F55C9F6E0E /* Pods-DALMApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALMApp.release.xcconfig"; path = "Target Support Files/Pods-DALMApp/Pods-DALMApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +83,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12196429EE0FEC55DE9F156 /* libPods-DALMApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14AEC90192601F6524F0AEE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA615A49A300F5628CBF76 /* Pods-DALMApp.debug.xcconfig */,
+				A9B338925D8E84F55C9F6E0E /* Pods-DALMApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6A3C710C2480B8620073B37A = {
 			isa = PBXGroup;
 			children = (
 				6A3C71172480B8620073B37A /* DALMApp */,
 				6A3C71162480B8620073B37A /* Products */,
+				14AEC90192601F6524F0AEE1 /* Pods */,
+				D7731EC09B67C2F26C3EE564 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +128,7 @@
 				6A3C71212480B8640073B37A /* Assets.xcassets */,
 				6A3C71232480B8640073B37A /* LaunchScreen.storyboard */,
 				6A3C71262480B8640073B37A /* Info.plist */,
+				6A4E9E442481273E002C5BF9 /* Constants.swift */,
 			);
 			path = DALMApp;
 			sourceTree = "<group>";
@@ -108,6 +137,11 @@
 			isa = PBXGroup;
 			children = (
 				6A3C712C2480BDA30073B37A /* FichaTecnica.swift */,
+				6A4E9E3A2481251B002C5BF9 /* Horario.swift */,
+				6A4E9E3C24812576002C5BF9 /* ModificarHorario.swift */,
+				6A4E9E3E248125B0002C5BF9 /* MonitoreoNivel.swift */,
+				6A4E9E4024812617002C5BF9 /* PerfilMascota.swift */,
+				6A4E9E422481264D002C5BF9 /* Usuario.swift */,
 			);
 			path = Modelo;
 			sourceTree = "<group>";
@@ -145,6 +179,14 @@
 			path = Controlador;
 			sourceTree = "<group>";
 		};
+		D7731EC09B67C2F26C3EE564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A9C34559B4F5FA6263B76A8 /* libPods-DALMApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A3C71292480B8640073B37A /* Build configuration list for PBXNativeTarget "DALMApp" */;
 			buildPhases = (
+				381970921BF250B79E243EE4 /* [CP] Check Pods Manifest.lock */,
 				6A3C71112480B8620073B37A /* Sources */,
 				6A3C71122480B8620073B37A /* Frameworks */,
 				6A3C71132480B8620073B37A /* Resources */,
@@ -214,12 +257,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		381970921BF250B79E243EE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DALMApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6A3C71112480B8620073B37A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6A3C71322480D2340073B37A /* MenuPrincipalViewController.swift in Sources */,
+				6A4E9E3B2481251B002C5BF9 /* Horario.swift in Sources */,
 				6A3C711D2480B8620073B37A /* ViewController.swift in Sources */,
 				6A3C71192480B8620073B37A /* AppDelegate.swift in Sources */,
 				6A3C71342480D27A0073B37A /* TipoMascotaViewController.swift in Sources */,
@@ -227,16 +296,21 @@
 				6A3C71442480D3D50073B37A /* FichaTecnicaViewController.swift in Sources */,
 				6A3C713E2480D3440073B37A /* MonitoreoNivelViewController.swift in Sources */,
 				6A3C7151248104050073B37A /* InformationScheduleCell.swift in Sources */,
+				6A4E9E432481264D002C5BF9 /* Usuario.swift in Sources */,
 				6A3C71492480FEA50073B37A /* InformationCell.swift in Sources */,
+				6A4E9E4124812617002C5BF9 /* PerfilMascota.swift in Sources */,
 				6A3C71422480D3890073B37A /* NivelAguaViewController.swift in Sources */,
 				6A3C711B2480B8620073B37A /* SceneDelegate.swift in Sources */,
 				6A3C71402480D36C0073B37A /* NivelAlimentoViewController.swift in Sources */,
 				6A3C71462480D4000073B37A /* EditarPerfilViewController.swift in Sources */,
+				6A4E9E3F248125B0002C5BF9 /* MonitoreoNivel.swift in Sources */,
 				6A3C713A2480D2E40073B37A /* HorarioViewController.swift in Sources */,
+				6A4E9E3D24812576002C5BF9 /* ModificarHorario.swift in Sources */,
 				6A3C71382480D2BE0073B37A /* GatoViewController.swift in Sources */,
 				6A3C71362480D29C0073B37A /* PerroViewController.swift in Sources */,
 				6A3C712D2480BDA30073B37A /* FichaTecnica.swift in Sources */,
 				6A3C713C2480D3160073B37A /* AudioViewController.swift in Sources */,
+				6A4E9E452481273E002C5BF9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +452,7 @@
 		};
 		6A3C712A2480B8640073B37A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ACA615A49A300F5628CBF76 /* Pods-DALMApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +471,7 @@
 		};
 		6A3C712B2480B8640073B37A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9B338925D8E84F55C9F6E0E /* Pods-DALMApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

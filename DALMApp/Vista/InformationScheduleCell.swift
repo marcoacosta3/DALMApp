@@ -20,7 +20,10 @@ class InformationScheduleCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        leftInformationScheduleView.layer.cornerRadius = leftInformationScheduleView.frame.size.height / 5
+        middleInformationScheduleView.layer.cornerRadius = middleInformationScheduleView.frame.size.height / 5
+        rightInformationScheduleView.layer.cornerRadius = rightInformationScheduleView.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

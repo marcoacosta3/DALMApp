@@ -18,7 +18,9 @@ class InformationCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        leftInformationView.layer.cornerRadius = leftInformationView.frame.size.height / 5
+        rightInformationView.layer.cornerRadius = rightInformationView.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
