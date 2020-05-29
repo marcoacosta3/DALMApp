@@ -9,6 +9,10 @@
 import UIKit
 
 class MonitoreoNivelViewController: UIViewController {
+    
+    @IBOutlet weak var foodLevel: UIButton!
+    @IBOutlet weak var waterLevel: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

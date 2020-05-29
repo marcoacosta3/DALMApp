@@ -10,6 +10,32 @@ import UIKit
 
 class PerroViewController: UIViewController {
     
+    @IBOutlet weak var petOwnerTextField: UITextField!
+    @IBOutlet weak var petNameTextField: UITextField!
+    @IBOutlet weak var petBreedTextField: UITextField!
+    @IBOutlet weak var petGenrePicker: UIPickerView!
+    @IBOutlet weak var petGenreTextField: UITextField!
+    @IBOutlet weak var petAgePicker: UIPickerView!
+    @IBOutlet weak var petAgeTextField: UITextField!
+    @IBOutlet weak var petSizePicker: UIPickerView!
+    @IBOutlet weak var petSizeTextField: UITextField!
+    @IBOutlet weak var petPhysicalActivityPicker: UIPickerView!
+    @IBOutlet weak var petPhysicalActivityTextField: UITextField!
+    @IBOutlet weak var petSpecialDietPicker: UIPickerView!
+    @IBOutlet weak var petSpecialDietTextField: UITextField!
+    @IBOutlet weak var petPregnantPicker: UIPickerView!
+    @IBOutlet weak var petPregnantTextField: UITextField!
+    @IBOutlet weak var petWeightPicker: UIPickerView!
+    @IBOutlet weak var petWeightTextField: UITextField!
+    @IBOutlet weak var petBreastFeedingPicker: UIPickerView!
+    @IBOutlet weak var petBreastFeedingTextField: UITextField!
+    @IBOutlet weak var petGenreLabel: UILabel!
+    @IBOutlet weak var petPregnantLabel: UILabel!
+    @IBOutlet weak var petBreastFeedingLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var mainMenuButton: UIButton!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          navigationController?.isNavigationBarHidden = true

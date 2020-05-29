@@ -55,6 +55,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hzi-z0-gj3"/>
+                    <connections>
+                        <outlet property="loginButton" destination="Aye-rx-rbA" id="4vl-WN-yl3"/>
+                        <outlet property="numeroDeDispositivoTextField" destination="42V-5F-8Kf" id="dnu-Ga-jHY"/>
+                        <outlet property="passwordTextField" destination="qAF-FX-e0n" id="40A-kv-tKu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,6 +178,15 @@
                         <viewLayoutGuide key="safeArea" id="abg-Cd-rOs"/>
                     </view>
                     <navigationItem key="navigationItem" id="PEg-zz-OdX"/>
+                    <connections>
+                        <outlet property="addAudioButton" destination="SOP-vW-OOY" id="7bx-Ji-EPb"/>
+                        <outlet property="dataSheetButton" destination="FLb-Rm-d3d" id="510-K6-2Fl"/>
+                        <outlet property="editProfileButton" destination="NSx-9Q-VtV" id="fDa-dX-TKN"/>
+                        <outlet property="levelMonitoringButton" destination="bEU-bO-mqq" id="hHT-ky-hJI"/>
+                        <outlet property="logOutButton" destination="vYd-ih-YT9" id="ETh-Ih-q9V"/>
+                        <outlet property="registerPetProfileButton" destination="sld-ef-oXl" id="dSh-nN-Toi"/>
+                        <outlet property="scheduleSettingsButton" destination="Tyq-Mk-Tlx" id="iNe-qt-65c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqB-pX-5kr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,6 +355,25 @@
                         <viewLayoutGuide key="safeArea" id="Nk6-Vs-Eac"/>
                     </view>
                     <navigationItem key="navigationItem" id="2Wx-SC-z2Y"/>
+                    <connections>
+                        <outlet property="choiceScheduleSwitch" destination="vcb-jB-sPB" id="O4h-ly-vje"/>
+                        <outlet property="mainMenuButton" destination="xmU-Y3-BQx" id="1wN-ej-JYU"/>
+                        <outlet property="personalizedDayLabel" destination="Eqg-dn-Kvc" id="wJP-a0-Yfv"/>
+                        <outlet property="personalizedDayTextField" destination="WWg-11-5wb" id="Roa-jp-Cbr"/>
+                        <outlet property="personalizedHourLabel" destination="nLt-UL-TFA" id="fHx-zF-e8d"/>
+                        <outlet property="personalizedHourTextField" destination="CKI-ij-AOu" id="avZ-5O-Xv7"/>
+                        <outlet property="personalizedPortionFoodLabel" destination="UUv-1T-hax" id="C0p-Xp-eD1"/>
+                        <outlet property="personalizedPortionFoodTextField" destination="cFw-Bj-P3Z" id="xph-It-EHj"/>
+                        <outlet property="saveButton" destination="rd4-ql-1te" id="AON-ez-a20"/>
+                        <outlet property="suggestedDayScheduleLabel" destination="n4A-Zq-3Z7" id="S5E-SK-tM5"/>
+                        <outlet property="suggestedDayScheduleTextField" destination="vHx-MU-0AN" id="ucf-K5-W72"/>
+                        <outlet property="suggestedHourScheduleLabel" destination="Tfx-5c-6xr" id="bbZ-tb-TOa"/>
+                        <outlet property="suggestedHourScheduleTextField" destination="gpr-vO-ztU" id="OCb-iC-BCv"/>
+                        <outlet property="suggestedPortionScheduleLabel" destination="leI-mN-zLn" id="ktg-L0-7wi"/>
+                        <outlet property="suggestedPortionScheduleTextField" destination="3RI-WA-rWB" id="bc2-M9-mNE"/>
+                        <outlet property="suggestedScheduleSwitch" destination="gdl-z1-8Uh" id="SDr-47-iT5"/>
+                        <outlet property="suggestedTextView" destination="2Az-iF-erR" id="47j-94-HqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20g-VH-o98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,14 +435,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0Nf-xi-tQu">
-                                <rect key="frame" x="132" y="427" width="150" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwK-7i-3sk">
+                                <rect key="frame" x="157" y="428" width="100" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                            </textField>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -421,6 +454,13 @@
                         <viewLayoutGuide key="safeArea" id="aWH-Jb-oMi"/>
                     </view>
                     <navigationItem key="navigationItem" id="HiW-vC-At1"/>
+                    <connections>
+                        <outlet property="mainMenuButton" destination="pQw-qc-BWF" id="StQ-pd-hff"/>
+                        <outlet property="playButton" destination="pXS-ca-T0b" id="RQm-Jk-rMv"/>
+                        <outlet property="recordButton" destination="JC3-sI-J8x" id="m2C-C1-WzL"/>
+                        <outlet property="recordingTimeLabel" destination="mwK-7i-3sk" id="KIw-Gd-gzh"/>
+                        <outlet property="saveButton" destination="Jb0-5z-d1c" id="8yE-K8-Puj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vt-8p-f36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -638,6 +678,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-rr-owa">
+                                <rect key="frame" x="224" y="194" width="170" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del dueño" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mwr-y7-GQ0">
                                 <rect key="frame" x="20" y="110" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -685,14 +733,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PGz-rr-owa">
-                                <rect key="frame" x="224" y="194" width="170" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la mascota" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Jh-ke-VHd">
                                 <rect key="frame" x="20" y="152" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -721,6 +761,38 @@
                         <viewLayoutGuide key="safeArea" id="mdv-7K-bp3"/>
                     </view>
                     <navigationItem key="navigationItem" id="BLN-vQ-Mi9"/>
+                    <connections>
+                        <outlet property="catAgePicker" destination="GfN-Uf-FAf" id="BRP-PI-ZdQ"/>
+                        <outlet property="catAgeTextField" destination="yvg-uJ-TLP" id="0pG-Uc-kMf"/>
+                        <outlet property="catWeightPicker" destination="pbB-r2-wXC" id="cWT-6N-z4v"/>
+                        <outlet property="catWeightTextField" destination="W0e-JL-xER" id="NV1-S9-seZ"/>
+                        <outlet property="changeAudioButton" destination="Uz1-0L-iB4" id="CmM-QH-zPA"/>
+                        <outlet property="dogAgePicker" destination="JmP-fo-R3M" id="uPv-An-789"/>
+                        <outlet property="dogAgeTextField" destination="VsT-6B-IQB" id="XML-RR-LKj"/>
+                        <outlet property="dogSizePicker" destination="EPe-Nw-yZ4" id="g43-Ge-FRs"/>
+                        <outlet property="dogSizeTextField" destination="igZ-QY-Urv" id="ijY-d3-rf4"/>
+                        <outlet property="dogWeightPicker" destination="MQy-Mf-W7o" id="0iC-9C-VN2"/>
+                        <outlet property="dogWeightTextField" destination="5wt-bl-Zcd" id="Liu-GA-2No"/>
+                        <outlet property="mainMenuButton" destination="w7R-Uh-HHl" id="pma-6e-082"/>
+                        <outlet property="petBreastFeedingLabel" destination="Hef-N1-dFn" id="Ff3-HY-8gI"/>
+                        <outlet property="petBreastFeedingPicker" destination="aJm-xI-EUh" id="fTX-Sn-TFn"/>
+                        <outlet property="petBreastFeedingTextField" destination="ldm-67-Dhk" id="aGb-1f-tOs"/>
+                        <outlet property="petBreedTextField" destination="ft3-9N-0r0" id="g1R-HM-J6N"/>
+                        <outlet property="petGenrePicker" destination="cmv-nN-BM7" id="Nqq-5h-MfW"/>
+                        <outlet property="petGenreTextField" destination="byP-tM-Frz" id="npH-fx-bNB"/>
+                        <outlet property="petKindPicker" destination="Hrw-2l-aH6" id="6Rc-D7-Rpk"/>
+                        <outlet property="petKindTextField" destination="PGz-rr-owa" id="FKv-ep-rcu"/>
+                        <outlet property="petNameTextField" destination="1Jh-ke-VHd" id="GnO-o9-rtv"/>
+                        <outlet property="petOwnerTextField" destination="mwr-y7-GQ0" id="nD6-ze-zcf"/>
+                        <outlet property="petPhysicalActivityPicker" destination="zOs-Ky-QyU" id="Jin-V6-Oe6"/>
+                        <outlet property="petPhysicalActivityTextField" destination="8tV-Qm-XMj" id="LOh-TH-8NG"/>
+                        <outlet property="petPregnantLabel" destination="KTV-zT-6iE" id="CL9-5R-oTK"/>
+                        <outlet property="petPregnantPicker" destination="2tI-rl-ktW" id="jDM-kj-E6J"/>
+                        <outlet property="petPregnantTextField" destination="h1t-KK-EYi" id="FOB-Uj-HaT"/>
+                        <outlet property="petSpecialDietPicker" destination="Lsu-Il-vsU" id="gH9-xh-78q"/>
+                        <outlet property="petSpecialDietTextField" destination="MuA-d8-XgJ" id="zQK-DO-RWT"/>
+                        <outlet property="saveButton" destination="nDj-MJ-NCO" id="xGQ-0l-jsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0S2-EY-L0t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -760,6 +832,9 @@
                         <viewLayoutGuide key="safeArea" id="4GO-QX-Ysb"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y3u-dv-lRF"/>
+                    <connections>
+                        <outlet property="tableView" destination="rUz-K1-xR1" id="WVj-zf-0Id"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FbW-xw-iBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -818,6 +893,10 @@
                         <viewLayoutGuide key="safeArea" id="tdx-1e-2cU"/>
                     </view>
                     <navigationItem key="navigationItem" id="lyW-Lo-a7Y"/>
+                    <connections>
+                        <outlet property="foodLevel" destination="uBa-yY-yUW" id="eDq-WI-xz4"/>
+                        <outlet property="waterLevel" destination="HrQ-DP-Bmv" id="RJO-sL-p1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PaX-4s-gt1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -876,6 +955,10 @@
                         <viewLayoutGuide key="safeArea" id="ZHL-y8-ZhL"/>
                     </view>
                     <navigationItem key="navigationItem" id="sbv-6p-WLM"/>
+                    <connections>
+                        <outlet property="catButton" destination="03u-4T-TNM" id="yfr-gi-GMl"/>
+                        <outlet property="dogButton" destination="AkQ-n9-WtW" id="POY-07-Csh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4go-6M-vhu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1115,6 +1198,32 @@
                         <viewLayoutGuide key="safeArea" id="HHV-6E-d4O"/>
                     </view>
                     <navigationItem key="navigationItem" id="pDH-0m-vID"/>
+                    <connections>
+                        <outlet property="mainMenuButton" destination="RmN-xi-An7" id="i69-71-1an"/>
+                        <outlet property="petAgePicker" destination="yDX-C8-31S" id="geN-bA-aV3"/>
+                        <outlet property="petAgeTextField" destination="Pen-Tw-EAs" id="fYx-v9-n48"/>
+                        <outlet property="petBreastFeedingLabel" destination="wG5-Gq-z3n" id="fAb-xy-65M"/>
+                        <outlet property="petBreastFeedingPicker" destination="ZFO-9N-VgV" id="z7Y-uD-TFr"/>
+                        <outlet property="petBreastFeedingTextField" destination="l7Z-4J-u04" id="zhA-7o-Zzg"/>
+                        <outlet property="petBreedTextField" destination="tNe-Af-Zfx" id="kCf-Wh-zT2"/>
+                        <outlet property="petGenreLabel" destination="9uQ-a0-BYr" id="58Z-rJ-aOa"/>
+                        <outlet property="petGenrePicker" destination="7ph-WF-vkr" id="h6X-cO-FbG"/>
+                        <outlet property="petGenreTextField" destination="dfN-DM-5ud" id="bAx-5z-IjA"/>
+                        <outlet property="petNameTextField" destination="4W8-o3-Mwq" id="h4C-bF-Nhn"/>
+                        <outlet property="petOwnerTextField" destination="xdV-U1-t3R" id="Hs4-co-Yic"/>
+                        <outlet property="petPhysicalActivityPicker" destination="I9G-eF-mGW" id="XRL-0P-Ys2"/>
+                        <outlet property="petPhysicalActivityTextField" destination="xsY-la-3Yy" id="E3t-OC-ZVY"/>
+                        <outlet property="petPregnantLabel" destination="zs1-Gu-5dD" id="4sN-oN-j4d"/>
+                        <outlet property="petPregnantPicker" destination="QoO-hY-Ju4" id="HK8-xw-PJr"/>
+                        <outlet property="petPregnantTextField" destination="ATQ-T1-5BE" id="Ro1-6C-MPZ"/>
+                        <outlet property="petSizePicker" destination="pok-O2-DAy" id="L1l-Uw-CDc"/>
+                        <outlet property="petSizeTextField" destination="lwS-GM-xmf" id="dSd-Ow-MXm"/>
+                        <outlet property="petSpecialDietPicker" destination="ITf-9z-D6N" id="Ziy-52-92D"/>
+                        <outlet property="petSpecialDietTextField" destination="qCS-tO-FSI" id="4Dq-1u-5Nq"/>
+                        <outlet property="petWeightPicker" destination="DO8-cp-dbK" id="sIJ-dB-Ag7"/>
+                        <outlet property="petWeightTextField" destination="xAW-gh-ske" id="VML-tZ-nzC"/>
+                        <outlet property="saveButton" destination="8j4-uF-6um" id="IAL-M2-Iix"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o16-km-sbH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1185,33 +1294,68 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-3N-9mz">
+                                <rect key="frame" x="68" y="281" width="326" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QgH-CH-Wcv">
                                 <rect key="frame" x="20" y="527" width="109" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-mv-kCp">
+                                <rect key="frame" x="20" y="527" width="110" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2BU-hg-E2k">
                                 <rect key="frame" x="284" y="453" width="109" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-2d-Mvq">
+                                <rect key="frame" x="284" y="453" width="110" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5F-hk-pNQ">
                                 <rect key="frame" x="224" y="367" width="169" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OBa-YL-UXe">
+                                <rect key="frame" x="224" y="367" width="170" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zn4-5o-DsA">
                                 <rect key="frame" x="20" y="453" width="201" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4E1-Tf-H46">
+                                <rect key="frame" x="21" y="453" width="200" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaZ-VR-fdt">
                                 <rect key="frame" x="20" y="367" width="110" height="34"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdX-G8-O53">
-                                <rect key="frame" x="253" y="228" width="140" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pickerView>
@@ -1223,46 +1367,11 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3fI-2d-Mvq">
-                                <rect key="frame" x="284" y="453" width="110" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdX-G8-O53">
+                                <rect key="frame" x="253" y="228" width="140" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-mv-kCp">
-                                <rect key="frame" x="20" y="527" width="110" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="4E1-Tf-H46">
-                                <rect key="frame" x="21" y="453" width="200" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-3N-9mz">
-                                <rect key="frame" x="68" y="281" width="326" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="OBa-YL-UXe">
-                                <rect key="frame" x="224" y="367" width="170" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sYd-v2-Qvx">
                                 <rect key="frame" x="254" y="228" width="140" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1334,6 +1443,29 @@
                         <viewLayoutGuide key="safeArea" id="QC6-kx-TDp"/>
                     </view>
                     <navigationItem key="navigationItem" id="nci-Ri-l5s"/>
+                    <connections>
+                        <outlet property="mainMenuButton" destination="vSq-Ax-7Xy" id="1z0-je-UbQ"/>
+                        <outlet property="petAgePicker" destination="hA2-fE-w5l" id="xtD-pn-dL9"/>
+                        <outlet property="petAgeTextField" destination="1KV-3N-9mz" id="wfB-Mx-jOL"/>
+                        <outlet property="petBreastFeedingLabel" destination="lAD-KX-Trg" id="qCe-3e-k79"/>
+                        <outlet property="petBreastFeedingPicker" destination="QgH-CH-Wcv" id="ZQf-JM-RVm"/>
+                        <outlet property="petBreastFeedingTextField" destination="6Jp-mv-kCp" id="1wh-rH-JCC"/>
+                        <outlet property="petBreedTextField" destination="xG6-En-JfX" id="p9j-IO-fDg"/>
+                        <outlet property="petGenrePicker" destination="tdX-G8-O53" id="4bW-A3-N33"/>
+                        <outlet property="petGenreTextField" destination="sYd-v2-Qvx" id="eQo-L9-a8r"/>
+                        <outlet property="petNameTextField" destination="zkR-QH-pFc" id="aPZ-iG-POW"/>
+                        <outlet property="petOwnerTextField" destination="hIa-GU-d6r" id="mXn-nL-ABf"/>
+                        <outlet property="petPhysicalActivityPicker" destination="b5F-hk-pNQ" id="FDS-K0-2BL"/>
+                        <outlet property="petPhysicalActivityTextField" destination="OBa-YL-UXe" id="rlh-wR-waJ"/>
+                        <outlet property="petPregnantLabel" destination="wHJ-5q-TEx" id="7Gm-i2-FGZ"/>
+                        <outlet property="petPregnantPicker" destination="2BU-hg-E2k" id="o2R-e5-wRj"/>
+                        <outlet property="petPregnantTextField" destination="3fI-2d-Mvq" id="2hH-BO-mFm"/>
+                        <outlet property="petSpecialDietPicker" destination="oaZ-VR-fdt" id="e3O-5v-50k"/>
+                        <outlet property="petSpecialDietTextField" destination="vLC-sA-JBH" id="9Dh-XV-ss7"/>
+                        <outlet property="petWeightPicker" destination="zn4-5o-DsA" id="xyf-hU-bVw"/>
+                        <outlet property="petWeightTextField" destination="4E1-Tf-H46" id="NNi-3f-OA1"/>
+                        <outlet property="saveButton" destination="3b0-Xm-ujA" id="c59-io-nvd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tt2-2S-JbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1403,7 +1535,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MCk-k6-pH2"/>
-        <segue reference="4Tj-26-UDi"/>
+        <segue reference="UNy-ve-aPL"/>
         <segue reference="Qq3-ov-itg"/>
     </inferredMetricsTieBreakers>
 </document>

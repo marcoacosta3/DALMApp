@@ -9,6 +9,11 @@
 import UIKit
 
 class TipoMascotaViewController: UIViewController {
+    
+    @IBOutlet weak var dogButton: UIButton!
+    @IBOutlet weak var catButton: UIButton!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

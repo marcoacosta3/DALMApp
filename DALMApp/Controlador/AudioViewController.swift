@@ -10,6 +10,13 @@ import UIKit
 
 class AudioViewController: UIViewController {
     
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var recordingTimeLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var mainMenuButton: UIButton!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          navigationController?.isNavigationBarHidden = true

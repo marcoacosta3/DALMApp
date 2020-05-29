@@ -10,6 +10,37 @@ import UIKit
 
 class EditarPerfilViewController: UIViewController {
     
+    @IBOutlet weak var petOwnerTextField: UITextField!
+    @IBOutlet weak var petNameTextField: UITextField!
+    @IBOutlet weak var petBreedTextField: UITextField!
+    @IBOutlet weak var petKindPicker: UIPickerView!
+    @IBOutlet weak var petKindTextField: UITextField!
+    @IBOutlet weak var petGenrePicker: UIPickerView!
+    @IBOutlet weak var petGenreTextField: UITextField!
+    @IBOutlet weak var dogSizePicker: UIPickerView!
+    @IBOutlet weak var dogSizeTextField: UITextField!
+    @IBOutlet weak var dogAgePicker: UIPickerView!
+    @IBOutlet weak var dogAgeTextField: UITextField!
+    @IBOutlet weak var catAgePicker: UIPickerView!
+    @IBOutlet weak var catAgeTextField: UITextField!
+    @IBOutlet weak var dogWeightPicker: UIPickerView!
+    @IBOutlet weak var dogWeightTextField: UITextField!
+    @IBOutlet weak var catWeightPicker: UIPickerView!
+    @IBOutlet weak var catWeightTextField: UITextField!
+    @IBOutlet weak var petPhysicalActivityPicker: UIPickerView!
+    @IBOutlet weak var petPhysicalActivityTextField: UITextField!
+    @IBOutlet weak var petSpecialDietPicker: UIPickerView!
+    @IBOutlet weak var petSpecialDietTextField: UITextField!
+    @IBOutlet weak var petBreastFeedingPicker: UIPickerView!
+    @IBOutlet weak var petBreastFeedingTextField: UITextField!
+    @IBOutlet weak var petPregnantPicker: UIPickerView!
+    @IBOutlet weak var petPregnantTextField: UITextField!
+    @IBOutlet weak var petBreastFeedingLabel: UILabel!
+    @IBOutlet weak var petPregnantLabel: UILabel!
+    @IBOutlet weak var changeAudioButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var mainMenuButton: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          navigationController?.isNavigationBarHidden = true

@@ -10,6 +10,25 @@ import UIKit
 
 class HorarioViewController: UIViewController {
     
+    @IBOutlet weak var suggestedScheduleSwitch: UISwitch!
+    @IBOutlet weak var choiceScheduleSwitch: UISwitch!
+    @IBOutlet weak var suggestedTextView: UITextView!
+    @IBOutlet weak var suggestedDayScheduleTextField: UITextField!
+    @IBOutlet weak var suggestedHourScheduleTextField: UITextField!
+    @IBOutlet weak var suggestedPortionScheduleTextField: UITextField!
+    @IBOutlet weak var personalizedDayTextField: UITextField!
+    @IBOutlet weak var personalizedPortionFoodTextField: UITextField!
+    @IBOutlet weak var personalizedHourTextField: UITextField!
+    @IBOutlet weak var suggestedDayScheduleLabel: UILabel!
+    @IBOutlet weak var suggestedHourScheduleLabel: UILabel!
+    @IBOutlet weak var suggestedPortionScheduleLabel: UILabel!
+    @IBOutlet weak var personalizedDayLabel: UILabel!
+    @IBOutlet weak var personalizedPortionFoodLabel: UILabel!
+    @IBOutlet weak var personalizedHourLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var mainMenuButton: UIButton!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          navigationController?.isNavigationBarHidden = true

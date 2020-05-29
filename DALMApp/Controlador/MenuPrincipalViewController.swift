@@ -10,6 +10,16 @@ import UIKit
 
 class MenuPrincipalViewController: UIViewController {
     
+    @IBOutlet weak var registerPetProfileButton: UIButton!
+    @IBOutlet weak var scheduleSettingsButton: UIButton!
+    @IBOutlet weak var addAudioButton: UIButton!
+    @IBOutlet weak var levelMonitoringButton: UIButton!
+    @IBOutlet weak var dataSheetButton: UIButton!
+    @IBOutlet weak var editProfileButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          navigationController?.isNavigationBarHidden = true
