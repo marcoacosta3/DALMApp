@@ -13,6 +13,24 @@
 		6A3C71202480B8620073B37A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C711E2480B8620073B37A /* Main.storyboard */; };
 		6A3C71222480B8640073B37A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C71212480B8640073B37A /* Assets.xcassets */; };
 		6A3C71252480B8640073B37A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C71232480B8640073B37A /* LaunchScreen.storyboard */; };
+		6A3C712D2480BDA30073B37A /* FichaTecnica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C712C2480BDA30073B37A /* FichaTecnica.swift */; };
+		6A3C71322480D2340073B37A /* MenuPrincipalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71312480D2340073B37A /* MenuPrincipalViewController.swift */; };
+		6A3C71342480D27A0073B37A /* TipoMascotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71332480D27A0073B37A /* TipoMascotaViewController.swift */; };
+		6A3C71362480D29C0073B37A /* PerroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71352480D29C0073B37A /* PerroViewController.swift */; };
+		6A3C71382480D2BE0073B37A /* GatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71372480D2BE0073B37A /* GatoViewController.swift */; };
+		6A3C713A2480D2E40073B37A /* HorarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71392480D2E40073B37A /* HorarioViewController.swift */; };
+		6A3C713C2480D3160073B37A /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C713B2480D3160073B37A /* AudioViewController.swift */; };
+		6A3C713E2480D3440073B37A /* MonitoreoNivelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C713D2480D3440073B37A /* MonitoreoNivelViewController.swift */; };
+		6A3C71402480D36C0073B37A /* NivelAlimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C713F2480D36C0073B37A /* NivelAlimentoViewController.swift */; };
+		6A3C71422480D3890073B37A /* NivelAguaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71412480D3890073B37A /* NivelAguaViewController.swift */; };
+		6A3C71442480D3D50073B37A /* FichaTecnicaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71432480D3D50073B37A /* FichaTecnicaViewController.swift */; };
+		6A3C71462480D4000073B37A /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71452480D4000073B37A /* EditarPerfilViewController.swift */; };
+		6A3C71492480FEA50073B37A /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C71472480FEA50073B37A /* InformationCell.swift */; };
+		6A3C714A2480FEA50073B37A /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C71482480FEA50073B37A /* InformationCell.xib */; };
+		6A3C714D248102930073B37A /* HeaderScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C714B248102930073B37A /* HeaderScheduleCell.swift */; };
+		6A3C714E248102930073B37A /* HeaderScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C714C248102930073B37A /* HeaderScheduleCell.xib */; };
+		6A3C7151248104050073B37A /* InformationScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C714F248104050073B37A /* InformationScheduleCell.swift */; };
+		6A3C7152248104050073B37A /* InformationScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C7150248104050073B37A /* InformationScheduleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +42,24 @@
 		6A3C71212480B8640073B37A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A3C71242480B8640073B37A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A3C71262480B8640073B37A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A3C712C2480BDA30073B37A /* FichaTecnica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FichaTecnica.swift; sourceTree = "<group>"; };
+		6A3C71312480D2340073B37A /* MenuPrincipalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPrincipalViewController.swift; sourceTree = "<group>"; };
+		6A3C71332480D27A0073B37A /* TipoMascotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipoMascotaViewController.swift; sourceTree = "<group>"; };
+		6A3C71352480D29C0073B37A /* PerroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerroViewController.swift; sourceTree = "<group>"; };
+		6A3C71372480D2BE0073B37A /* GatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatoViewController.swift; sourceTree = "<group>"; };
+		6A3C71392480D2E40073B37A /* HorarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorarioViewController.swift; sourceTree = "<group>"; };
+		6A3C713B2480D3160073B37A /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		6A3C713D2480D3440073B37A /* MonitoreoNivelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoreoNivelViewController.swift; sourceTree = "<group>"; };
+		6A3C713F2480D36C0073B37A /* NivelAlimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NivelAlimentoViewController.swift; sourceTree = "<group>"; };
+		6A3C71412480D3890073B37A /* NivelAguaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NivelAguaViewController.swift; sourceTree = "<group>"; };
+		6A3C71432480D3D50073B37A /* FichaTecnicaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FichaTecnicaViewController.swift; sourceTree = "<group>"; };
+		6A3C71452480D4000073B37A /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
+		6A3C71472480FEA50073B37A /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
+		6A3C71482480FEA50073B37A /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
+		6A3C714B248102930073B37A /* HeaderScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderScheduleCell.swift; sourceTree = "<group>"; };
+		6A3C714C248102930073B37A /* HeaderScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderScheduleCell.xib; sourceTree = "<group>"; };
+		6A3C714F248104050073B37A /* InformationScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationScheduleCell.swift; sourceTree = "<group>"; };
+		6A3C7150248104050073B37A /* InformationScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationScheduleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +94,55 @@
 			children = (
 				6A3C71182480B8620073B37A /* AppDelegate.swift */,
 				6A3C711A2480B8620073B37A /* SceneDelegate.swift */,
-				6A3C711C2480B8620073B37A /* ViewController.swift */,
-				6A3C711E2480B8620073B37A /* Main.storyboard */,
+				6A3C712E2480BDD90073B37A /* Modelo */,
+				6A3C712F2480BDFE0073B37A /* Vista */,
+				6A3C71302480BE0C0073B37A /* Controlador */,
 				6A3C71212480B8640073B37A /* Assets.xcassets */,
 				6A3C71232480B8640073B37A /* LaunchScreen.storyboard */,
 				6A3C71262480B8640073B37A /* Info.plist */,
 			);
 			path = DALMApp;
+			sourceTree = "<group>";
+		};
+		6A3C712E2480BDD90073B37A /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				6A3C712C2480BDA30073B37A /* FichaTecnica.swift */,
+			);
+			path = Modelo;
+			sourceTree = "<group>";
+		};
+		6A3C712F2480BDFE0073B37A /* Vista */ = {
+			isa = PBXGroup;
+			children = (
+				6A3C711E2480B8620073B37A /* Main.storyboard */,
+				6A3C71472480FEA50073B37A /* InformationCell.swift */,
+				6A3C71482480FEA50073B37A /* InformationCell.xib */,
+				6A3C714B248102930073B37A /* HeaderScheduleCell.swift */,
+				6A3C714C248102930073B37A /* HeaderScheduleCell.xib */,
+				6A3C714F248104050073B37A /* InformationScheduleCell.swift */,
+				6A3C7150248104050073B37A /* InformationScheduleCell.xib */,
+			);
+			path = Vista;
+			sourceTree = "<group>";
+		};
+		6A3C71302480BE0C0073B37A /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				6A3C711C2480B8620073B37A /* ViewController.swift */,
+				6A3C71312480D2340073B37A /* MenuPrincipalViewController.swift */,
+				6A3C71332480D27A0073B37A /* TipoMascotaViewController.swift */,
+				6A3C71352480D29C0073B37A /* PerroViewController.swift */,
+				6A3C71372480D2BE0073B37A /* GatoViewController.swift */,
+				6A3C71392480D2E40073B37A /* HorarioViewController.swift */,
+				6A3C713B2480D3160073B37A /* AudioViewController.swift */,
+				6A3C713D2480D3440073B37A /* MonitoreoNivelViewController.swift */,
+				6A3C713F2480D36C0073B37A /* NivelAlimentoViewController.swift */,
+				6A3C71412480D3890073B37A /* NivelAguaViewController.swift */,
+				6A3C71432480D3D50073B37A /* FichaTecnicaViewController.swift */,
+				6A3C71452480D4000073B37A /* EditarPerfilViewController.swift */,
+			);
+			path = Controlador;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +205,10 @@
 			files = (
 				6A3C71252480B8640073B37A /* LaunchScreen.storyboard in Resources */,
 				6A3C71222480B8640073B37A /* Assets.xcassets in Resources */,
+				6A3C714A2480FEA50073B37A /* InformationCell.xib in Resources */,
+				6A3C7152248104050073B37A /* InformationScheduleCell.xib in Resources */,
 				6A3C71202480B8620073B37A /* Main.storyboard in Resources */,
+				6A3C714E248102930073B37A /* HeaderScheduleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +219,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A3C71322480D2340073B37A /* MenuPrincipalViewController.swift in Sources */,
 				6A3C711D2480B8620073B37A /* ViewController.swift in Sources */,
 				6A3C71192480B8620073B37A /* AppDelegate.swift in Sources */,
+				6A3C71342480D27A0073B37A /* TipoMascotaViewController.swift in Sources */,
+				6A3C714D248102930073B37A /* HeaderScheduleCell.swift in Sources */,
+				6A3C71442480D3D50073B37A /* FichaTecnicaViewController.swift in Sources */,
+				6A3C713E2480D3440073B37A /* MonitoreoNivelViewController.swift in Sources */,
+				6A3C7151248104050073B37A /* InformationScheduleCell.swift in Sources */,
+				6A3C71492480FEA50073B37A /* InformationCell.swift in Sources */,
+				6A3C71422480D3890073B37A /* NivelAguaViewController.swift in Sources */,
 				6A3C711B2480B8620073B37A /* SceneDelegate.swift in Sources */,
+				6A3C71402480D36C0073B37A /* NivelAlimentoViewController.swift in Sources */,
+				6A3C71462480D4000073B37A /* EditarPerfilViewController.swift in Sources */,
+				6A3C713A2480D2E40073B37A /* HorarioViewController.swift in Sources */,
+				6A3C71382480D2BE0073B37A /* GatoViewController.swift in Sources */,
+				6A3C71362480D29C0073B37A /* PerroViewController.swift in Sources */,
+				6A3C712D2480BDA30073B37A /* FichaTecnica.swift in Sources */,
+				6A3C713C2480D3160073B37A /* AudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
