@@ -2,15 +2,18 @@
 //  GatoViewController.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 29/05/20.
+//  Created by Marco Acosta on 29/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
+//Framework y librería
 import UIKit
 import Alamofire
 
+//Define la clase y los protocolos de textfield y picker
 class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    //Outlets de los textfield, picker, label, botones
     @IBOutlet weak var petOwnerTextField: UITextField!
     @IBOutlet weak var petNameTextField: UITextField!
     @IBOutlet weak var petBreedTextField: UITextField!
@@ -33,6 +36,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var mainMenuButton: UIButton!
     
+    //Variables para los datos de los pickers
     var petGenrePickerData: [String] = [String]( )
     var petAgePickerData: [String] = [String]( )
     var petPhysicalActivityPickerData: [String] = [String]( )
@@ -41,25 +45,29 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
     var petPregnantPickerData: [String] = [String]( )
     var petBreastfeedingPickerData: [String] = [String]( )
     
+    //Variables usuario para token y de índices
     var usuario: String = ""
     var petGenreIndex: String = ""
     var petAgeIndex: String = ""
     var petWeightIndex: String = ""
     var petPhysicalActivityIndex: String = ""
     
+    //Método que mostrará el navigationbar
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         navigationController?.isNavigationBarHidden = true
-     }
-     
-     override func viewWillDisappear(_ animated: Bool) {
-         super.viewWillDisappear(animated)
-         navigationController?.isNavigationBarHidden = false
-     }
-
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    //Método que desaparecerá el navigationbar
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Asignación de los delegados de textfield, picker
         petOwnerTextField.delegate = self
         petNameTextField.delegate = self
         petBreedTextField.delegate = self
@@ -81,6 +89,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         self.petBreastFeedingPicker.delegate = self
         self.petBreastFeedingPicker.dataSource = self
         
+        //Pone los pickers en los textfield
         petGenreTextField.inputView = petGenrePicker
         petGenrePicker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         petAgeTextField.inputView = petAgePicker
@@ -96,6 +105,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         petPhysicalActivityTextField.inputView = petPhysicalActivityPicker
         petPhysicalActivityPicker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         
+        //Datos de las opciones que llevará cada picker
         petGenrePickerData = ["Macho", "Hembra"]
         petAgePickerData = ["Minino", "Adulto", "Vejez"]
         petWeightPickerData = ["De 1 a 2kg", "De 3 a 5kg", "Más de 5kg"]
@@ -104,11 +114,13 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         petBreastfeedingPickerData = ["Si", "No"]
         petPhysicalActivityPickerData = ["Baja", "Normal", "Alta"]
         
+        //Deshabilita las opciones de preñada y lactancia de inicio
         petPregnantPicker.isUserInteractionEnabled = false
         petBreastFeedingPicker.isUserInteractionEnabled = false
         petPregnantTextField.isUserInteractionEnabled = false
         petBreastFeedingTextField.isUserInteractionEnabled = false
         
+        //Transparencia de lasopciones preñada y alimentación
         petPregnantPicker.alpha = 0.01
         petPregnantLabel.alpha = 0.5
         petPregnantTextField.alpha = 0.5
@@ -116,31 +128,36 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         petBreastFeedingLabel.alpha = 0.5
         petBreastFeedingTextField.alpha = 0.5
         
+        //Llamado para descartar picker
         dismissPickerView()
         
+        //Diseño de botones
         saveButton.layer.cornerRadius = saveButton.frame.size.height / 3
         mainMenuButton.layer.cornerRadius = mainMenuButton.frame.size.height / 3
         //petNameTextField.text = usuario
         print(usuario + " Gato")
     }
     
+    //Método para pasar al siguiente textfield cuando termina de escribir
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-           nextField.becomeFirstResponder()
+            nextField.becomeFirstResponder()
             textField.endEditing(true)
             print(textField.text!)
         } else {
-           textField.resignFirstResponder()
+            textField.resignFirstResponder()
         }
-
+        
         return false
     }
     
+    //Método del número de componentes del picker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //Método para saber cuantos elementos hay en cada picker
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag == 1{
             return petGenrePickerData.count
@@ -159,6 +176,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         }
     }
     
+    //Método para poner las opciones de cada picker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1{
             return petGenrePickerData[row]
@@ -177,6 +195,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         }
     }
     
+    //Método para poner en el textfield la opción seleccionada del picker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView.tag == 1{
@@ -218,7 +237,9 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         }
     }
     
+    //Método para habilitar o deshabilitar opciones de género hembra
     func optionsPetGenre(row:Int) {
+        //Si es género hembra habilita sus opciones
         if petGenrePickerData[row] == "Hembra"{
             let petGenreValueSelected = petGenrePickerData[row] as String
             petBreastFeedingPicker.isUserInteractionEnabled = true
@@ -239,6 +260,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
             petGenreIndex = String(row + 1)
             print(petGenreIndex)
         }else{
+            //Si es género macho deahabilita las opciones de hembra
             let petGenreValueSelected = petGenrePickerData[row] as String
             petBreastFeedingPicker.isUserInteractionEnabled = false
             petPregnantPicker.isUserInteractionEnabled = false
@@ -262,6 +284,7 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         }
     }
     
+    //Método para descartar picker
     func dismissPickerView() {
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -293,60 +316,97 @@ class GatoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         view.endEditing(true)
     }
     
+    //Método de alerta muestra mensaje de guardado
     func displayAlertSaved() {
+        //Crea la alerta
         let alert = UIAlertController(title: "Configuración Guardada", message: "La configuración se ha guardado exitosamente.", preferredStyle: .alert)
+        //Agrega la acción a la alerta
         alert.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default, handler: { _ in
-        NSLog("The \"Aceptar\" alert occured.")
+            NSLog("The \"Aceptar\" alert occured.")
         }))
+        //Muestra la alerta
         self.present(alert, animated: true, completion: nil)
     }
     
+    //Método de alerta muestra alerta de campos vacíos
     func displayAlertEmptyField() {
+        //Crea la alerta
         let alert = UIAlertController(title: "Campos Vacíos", message: "Todos los campos son requeridos.", preferredStyle: .alert)
+        //Agrega la acción a la alerta
         alert.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Default action"), style: .default, handler: { _ in
-        NSLog("The \"Aceptar\" alert occured.")
+            NSLog("The \"Aceptar\" alert occured.")
         }))
+        //Muestra la alerta
         self.present(alert, animated: true, completion: nil)
     }
     
+    //Método de alerta de Error no se pudo registrar
+    func displayAlertError() {
+        //Crea la alerta
+        let alert = UIAlertController(title: "Error", message: "No se ha podido registrar la mascota.", preferredStyle: .alert)
+        //Agrega la acción a la alerta
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Aceptar", comment: "Acción por defecto"), style: .default, handler: { _ in
+            NSLog("El \"Aceptar\" ocurrio de alerta.")
+        }))
+        //Muestra la alerta
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //Action de botón para guardar el perfil de mascota
     @IBAction func didTapSaveButton(_ sender: UIButton) {
+        
+        //Verifica que no haya campos vacíos y muestra alerta
         if petOwnerTextField.text == "" || petNameTextField.text == "" || petBreedTextField.text == "" || petGenreTextField.text == "" || petAgeTextField.text == "" || petPhysicalActivityTextField.text == "" || petSpecialDietTextField.text == "" || petWeightTextField.text == "" {
             
             displayAlertEmptyField()
             
         }else {
-            
+            //Llamado al método de registar mascota y muestra mensaje
             registerPetProfileRest(token: usuario, nombreDuenio_gat: petOwnerTextField.text!, nombreMascota_gat: petNameTextField.text!, raza: petBreedTextField.text!, genero_gat: petGenreIndex, edad_gat: petAgeIndex, peso_gat: petWeightIndex, actFisica_gat: petPhysicalActivityIndex, dieta_gat: petSpecialDietTextField.text!, prenia_gat: petPregnantTextField.text!, lactancia_gat: petBreastFeedingTextField.text!)
             
-            displayAlertSaved()
+            //displayAlertSaved()
             
         }
     }
     
+    //Método para registrar una mascota, recibe los todoslos datos del perfil
     func registerPetProfileRest(token: String, nombreDuenio_gat: String, nombreMascota_gat: String, raza: String, genero_gat: String, edad_gat: String, peso_gat: String, actFisica_gat: String, dieta_gat: String, prenia_gat: String, lactancia_gat: String) {
         
+        //URL del webservice a conectarse
         let url = "http://n-systems-mx.com/tta069/controlador/guardarGato.php"
+        //Parámetros de la petición al webservice
         let parameters = ["token"      :token,
-                   "nombreDuenio_gat"  :nombreDuenio_gat,
-                   "nombreMascota_gat" :nombreMascota_gat,
-                   "raza"              :raza,
-                   "genero_gat"        :genero_gat,
-                   "edad_gat"          :edad_gat,
-                   "peso_gat"          :peso_gat,
-                   "actFisica_gat"     :actFisica_gat,
-                   "dieta_gat"         :dieta_gat,
-                   "prenia_gat"        :prenia_gat,
-                   "lactancia_gat"     :lactancia_gat
-               ]
-
+                          "nombreDuenio_gat"  :nombreDuenio_gat,
+                          "nombreMascota_gat" :nombreMascota_gat,
+                          "raza"              :raza,
+                          "genero_gat"        :genero_gat,
+                          "edad_gat"          :edad_gat,
+                          "peso_gat"          :peso_gat,
+                          "actFisica_gat"     :actFisica_gat,
+                          "dieta_gat"         :dieta_gat,
+                          "prenia_gat"        :prenia_gat,
+                          "lactancia_gat"     :lactancia_gat
+        ]
+        //Headers de la petición al webservice
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
-
+        
+        //Método de la petición al webservice
         AF.request(url, method: .post, parameters: parameters, headers: headers).validate().responseJSON { (response) in
             print(response.result)
+            
+            switch response.result {
+            case .success(_):
+                self.displayAlertSaved()
+                break
+            case .failure(_):
+                self.displayAlertError()
+                break
+            }
         }
         
     }
     
+    //Método para preparar segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier, identifier == "MenuPrincipalButtonToMenuPrincipal" {
             guard let menuPrincipalBVC = segue.destination as? MenuPrincipalViewController else {

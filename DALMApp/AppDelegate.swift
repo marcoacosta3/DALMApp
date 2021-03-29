@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 28/05/20.
+//  Created by Marco Acosta on 28/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Permitir notificaciones
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+           if !accepted {
+              print("Permiso denegado por el usuario")
+           }
+        }
         return true
     }
 

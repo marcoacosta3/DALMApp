@@ -2,35 +2,39 @@
 //  FichaTecnicaViewController.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 29/05/20.
+//  Created by Marco Acosta on 29/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
+//Framework y librería
 import UIKit
 import Alamofire
 
+//Define la clase
 class FichaTecnicaViewController: UIViewController {
     
+    //Outlet de la tabla
     @IBOutlet weak var tableView: UITableView!
     
+    //Variables de la tabla
     var information: [DataSheet] = []
-       
-       var header: [HeaderSchedule] = [
-           HeaderSchedule(dayH: "Día", hourH: "Hora", portionFoodH: "Porción")
-       ]
-       
-       var schedule: [ScheduleInformation] = []
-       
-       var petGenreData: [String] = [String]( )
-       var petAgeData: [String] = [String]()
-       var petWeightData: [String] = [String]()
-       var usuario: String = ""
-
+    var header: [HeaderSchedule] = [
+        HeaderSchedule(dayH: "Día", hourH: "Hora", portionFoodH: "Porción")
+    ]
+    var schedule: [ScheduleInformation] = []
+    
+    var petGenreData: [String] = [String]( )
+    var petAgeData: [String] = [String]()
+    var petWeightData: [String] = [String]()
+    //Variable usuario para token
+    var usuario: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         
+        //Se registra los tipos de celda en la tabla
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         tableView.register(UINib(nibName: K.cellNibNameS, bundle: nil), forCellReuseIdentifier: K.cellIdentifierS)
         tableView.register(UINib(nibName: K.cellNibNameHS, bundle: nil), forCellReuseIdentifier: K.cellIdentifierHS)
@@ -44,15 +48,21 @@ class FichaTecnicaViewController: UIViewController {
         scheduleRest(usuario: usuario)
     }
     
+    //Método para obtener la información del perfil de mascota
     func petProfileRest(usuario: String) {
+        
+        //URL del webservice a conectarse
         let url = "http://n-systems-mx.com/tta069/controlador/modificarPerfil.php"
+        //Parámetros de la petición al webservice
         let parameters = ["token": usuario]
-
+        //Headers de la petición al webservice
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
-
+        
+        //Método de la petición al webservice, respuesta decodificada de tipo PerfilMascota
         AF.request(url, method: .post, parameters: parameters, headers: headers).validate().responseDecodable(of: PerfilMascota.self) { (response) in
             print(response.result)
             guard let informationResponse = response.value else { return }
+            //Añade la información obtenida a la tabla
             self.information.append(DataSheet(fieldName: "Dueño", fieldInformation: informationResponse.nombre_duenio))
             self.information.append(DataSheet(fieldName: "Mascota", fieldInformation: informationResponse.nombre_mascota))
             self.information.append(DataSheet(fieldName: "Raza", fieldInformation: informationResponse.raza))
@@ -60,21 +70,26 @@ class FichaTecnicaViewController: UIViewController {
             self.information.append(DataSheet(fieldName: "Edad", fieldInformation: self.petAgeData[(Int(informationResponse.edad) ?? 0) - 1] as String))
             self.information.append(DataSheet(fieldName: "Peso", fieldInformation: self.petWeightData[(Int(informationResponse.peso) ?? 0) - 1] as String))
             self.information.append(DataSheet(fieldName: "Dieta Especial", fieldInformation: informationResponse.dieta))
-
+            
             self.tableView.reloadData()
         }
     }
     
+    //Método para obtener el horario
     func scheduleRest(usuario: String) {
+        
+        //URL del webservice a conectarse
         let url = "http://n-systems-mx.com/tta069/controlador/modificarHorario.php"
+        //Parámetros de la petición al webservice
         let parameters = ["token": usuario]
-
+        //Headers de la petición al webservice
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
-
+        
+        //Método de la petición al webservice, respuesta decodificada de tipo ModificarHorario
         AF.request(url, method: .post, parameters: parameters, headers: headers).validate().responseDecodable(of: ModificarHorario.self) { (response) in
             print(response.result)
             guard let informationResponseS = response.value else { return }
-
+            //Añade la información obtenida a la tabla
             self.schedule.append(ScheduleInformation(day: "Lunes", hour: informationResponseS.lunes.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
             self.schedule.append(ScheduleInformation(day: "Martes", hour: informationResponseS.martes.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
             self.schedule.append(ScheduleInformation(day: "Miércoles", hour: informationResponseS.miercoles.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
@@ -82,7 +97,7 @@ class FichaTecnicaViewController: UIViewController {
             self.schedule.append(ScheduleInformation(day: "Viernes", hour: informationResponseS.viernes.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
             self.schedule.append(ScheduleInformation(day: "Sábado", hour: informationResponseS.sabado.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
             self.schedule.append(ScheduleInformation(day: "Domingo", hour: informationResponseS.domingo.joined(separator: ", "), portionFood: informationResponseS.gramos + "g"))
-
+            
             self.tableView.reloadData()
         }
     }
@@ -91,6 +106,7 @@ class FichaTecnicaViewController: UIViewController {
 
 extension FichaTecnicaViewController: UITableViewDataSource {
     
+    //Método para saber cuantas filas tiene la tabla
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
@@ -104,6 +120,7 @@ extension FichaTecnicaViewController: UITableViewDataSource {
         
     }
     
+    //Método para llenar con la información la tabla
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! InformationCell
@@ -141,6 +158,7 @@ extension FichaTecnicaViewController: UITableViewDataSource {
     //
     //    }
     
+    //Método del número de secciones de la tabla
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }

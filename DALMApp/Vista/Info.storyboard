@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YnX-cX-aFx">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info View Controller-->
+        <scene sceneID="Ldc-ce-QZS">
+            <objects>
+                <viewController storyboardIdentifier="InfoVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="YnX-cX-aFx" customClass="InfoViewController" customModule="DALMApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c8p-wK-RZA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxn-Js-v5T">
+                                <rect key="frame" x="69.666666666666686" y="183.33333333333334" width="275" height="369.33333333333326"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCr-cQ-0bw">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="70"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acerca de" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYP-fq-M9w">
+                                                <rect key="frame" x="8" y="8" width="259" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                                <color key="textColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="kYP-fq-M9w" firstAttribute="top" secondItem="nCr-cQ-0bw" secondAttribute="topMargin" id="7f8-gn-buo"/>
+                                            <constraint firstAttribute="height" constant="70" id="Eer-OD-PiL"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="kYP-fq-M9w" secondAttribute="trailing" id="IaH-pZ-WoQ"/>
+                                            <constraint firstItem="kYP-fq-M9w" firstAttribute="leading" secondItem="nCr-cQ-0bw" secondAttribute="leadingMargin" id="S0r-8T-DOi"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="kYP-fq-M9w" secondAttribute="bottom" id="T76-YO-XqR"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-Si-RvG">
+                                        <rect key="frame" x="16" y="85.999999999999957" width="243" height="223.33333333333337"/>
+                                        <string key="text">DALMApp                Dispensador de Alimento para Mascotas con Aplicación Móvil para Configuración y Dosificación.                Elaborado por: López Rojas Ariel                                                    Acosta Miranda Marco Antonio         Barragán Martínez Raúl                     Pérez González David Antonio  2020 ©</string>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <color key="textColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9R4-55-Hyx">
+                                        <rect key="frame" x="8" y="325.33333333333337" width="259" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-b8-Shs">
+                                                <rect key="frame" x="0.0" y="0.0" width="259" height="36"/>
+                                                <color key="backgroundColor" red="0.66274509800000003" green="0.44440829749999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal" title="Aceptar">
+                                                    <color key="titleColor" red="0.98679298159999995" green="0.84841948749999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didTapAcceptButton:" destination="YnX-cX-aFx" eventType="touchUpInside" id="R7n-S0-NjC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="9R4-55-Hyx" firstAttribute="top" secondItem="kbf-Si-RvG" secondAttribute="bottom" constant="16" id="1dz-Ll-NGl"/>
+                                    <constraint firstItem="kbf-Si-RvG" firstAttribute="top" secondItem="nCr-cQ-0bw" secondAttribute="bottom" constant="16" id="5JY-aJ-svD"/>
+                                    <constraint firstItem="9R4-55-Hyx" firstAttribute="leading" secondItem="zxn-Js-v5T" secondAttribute="leadingMargin" id="8IY-ca-Wri"/>
+                                    <constraint firstItem="kbf-Si-RvG" firstAttribute="leading" secondItem="zxn-Js-v5T" secondAttribute="leading" constant="16" id="NgW-KN-9SH"/>
+                                    <constraint firstAttribute="trailing" secondItem="nCr-cQ-0bw" secondAttribute="trailing" id="QWL-F2-IhP"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="9R4-55-Hyx" secondAttribute="trailing" id="aBU-4n-7pL"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="9R4-55-Hyx" secondAttribute="bottom" id="aCq-wK-C7s"/>
+                                    <constraint firstAttribute="trailing" secondItem="kbf-Si-RvG" secondAttribute="trailing" constant="16" id="bZz-3e-shb"/>
+                                    <constraint firstAttribute="width" constant="275" id="cxi-yO-Xh3"/>
+                                    <constraint firstItem="nCr-cQ-0bw" firstAttribute="leading" secondItem="zxn-Js-v5T" secondAttribute="leading" id="f7P-N2-rIB"/>
+                                    <constraint firstItem="nCr-cQ-0bw" firstAttribute="top" secondItem="zxn-Js-v5T" secondAttribute="top" id="wYL-YS-lMu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zxn-Js-v5T" firstAttribute="centerX" secondItem="c8p-wK-RZA" secondAttribute="centerX" id="UA1-a1-xrF"/>
+                            <constraint firstItem="zxn-Js-v5T" firstAttribute="centerY" secondItem="c8p-wK-RZA" secondAttribute="centerY" id="UJt-BH-F8f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kfa-mn-xX6"/>
+                    </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="roZ-b8-Shs" id="nEY-M6-6Oy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMw-Ut-ijM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="113.31521739130436"/>
+        </scene>
+    </scenes>
+</document>

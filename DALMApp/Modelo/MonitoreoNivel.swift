@@ -2,12 +2,14 @@
 //  MonitoreoNivel.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 29/05/20.
+//  Created by Marco Acosta on 29/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
+//Modelo para decodificar la respuesta del webservice del monitoreo de niveles
 import Foundation
 
+//struct para niveles de agua
 struct MonitoreoNivelAgua: Decodable {
     let exito: String
        let token: String
@@ -16,6 +18,7 @@ struct MonitoreoNivelAgua: Decodable {
        let plato_agua: String
 }
 
+//struct para niveles de alimento
 struct MonitoreoNivelAlimento: Decodable {
     let exito: String
        let token: String

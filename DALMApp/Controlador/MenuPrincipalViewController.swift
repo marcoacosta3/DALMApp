@@ -2,15 +2,18 @@
 //  MenuPrincipalViewController.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 29/05/20.
+//  Created by Marco Acosta on 29/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
+//Framework y librería
 import UIKit
 import Alamofire
 
+//Define la clase
 class MenuPrincipalViewController: UIViewController {
     
+    //Outlets de los botones
     @IBOutlet weak var registerPetProfileButton: UIButton!
     @IBOutlet weak var scheduleSettingsButton: UIButton!
     @IBOutlet weak var addAudioButton: UIButton!
@@ -18,61 +21,69 @@ class MenuPrincipalViewController: UIViewController {
     @IBOutlet weak var dataSheetButton: UIButton!
     @IBOutlet weak var editProfileButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var infoButton: UIButton!
     
+    //Variable usuario para token e instancia de InfoService
     var usuario: String = ""
+    let info = InfoService()
     
+    //Método que mostrará el navigationbar
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-         navigationController?.isNavigationBarHidden = true
-     }
-     
-     override func viewWillDisappear(_ animated: Bool) {
-         super.viewWillDisappear(animated)
-         navigationController?.isNavigationBarHidden = false
-     }
-
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
+    //Método que desaparecerá el navigationbar
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        registerPetProfileButton.layer.cornerRadius = registerPetProfileButton.frame.size.height / 3
-                scheduleSettingsButton.layer.cornerRadius = scheduleSettingsButton.frame.size.height / 3
-                addAudioButton.layer.cornerRadius = addAudioButton.frame.size.height / 3
-                levelMonitoringButton.layer.cornerRadius = levelMonitoringButton.frame.size.height / 3
-                dataSheetButton.layer.cornerRadius = dataSheetButton.frame.size.height / 3
-                editProfileButton.layer.cornerRadius = editProfileButton.frame.size.height / 3
-                logOutButton.layer.cornerRadius = logOutButton.frame.size.height / 3
-                
-                scheduleSettingsButton.isEnabled = false
-                scheduleSettingsButton.alpha = 0.5
-                addAudioButton.isEnabled = false
-                addAudioButton.alpha = 0.5
-                editProfileButton.isEnabled = false
-                editProfileButton.alpha = 0.5
-                petAlreadyRegistratedRest(usuario: usuario)
-        //        navigationController?.isNavigationBarHidden = true
-                print(usuario)
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    func petAlreadyRegistratedRest(usuario: String) {
-        let url = "http://n-systems-mx.com/tta069/controlador/modificarPerfil.php"
-        let parameters = ["token": usuario]
         
+        //Diseño de botones
+        registerPetProfileButton.layer.cornerRadius = registerPetProfileButton.frame.size.height / 3
+        scheduleSettingsButton.layer.cornerRadius = scheduleSettingsButton.frame.size.height / 3
+        addAudioButton.layer.cornerRadius = addAudioButton.frame.size.height / 3
+        levelMonitoringButton.layer.cornerRadius = levelMonitoringButton.frame.size.height / 3
+        dataSheetButton.layer.cornerRadius = dataSheetButton.frame.size.height / 3
+        editProfileButton.layer.cornerRadius = editProfileButton.frame.size.height / 3
+        logOutButton.layer.cornerRadius = logOutButton.frame.size.height / 3
+        
+        //Botones de horario, audio y editar perfil deshabilitados de inicio
+        scheduleSettingsButton.isEnabled = false
+        scheduleSettingsButton.alpha = 0.5
+        addAudioButton.isEnabled = false
+        addAudioButton.alpha = 0.5
+        editProfileButton.isEnabled = false
+        editProfileButton.alpha = 0.5
+        petAlreadyRegistratedRest(usuario: usuario)
+        //        navigationController?.isNavigationBarHidden = true
+        print(usuario)
+    }
+    
+    //Action que mostrará acerca de
+    @IBAction func didTapInfoButton(_ sender: UIButton) {
+        let infoVC = info.alert()
+        present(infoVC, animated: true)
+    }
+    
+    //Método que verificica si hay una mascota registrada
+    func petAlreadyRegistratedRest(usuario: String) {
+        
+        //URL del webservice a conectarse
+        let url = "http://n-systems-mx.com/tta069/controlador/modificarPerfil.php"
+        //Parámetros de la petición al webservice
+        let parameters = ["token": usuario]
+        //Headers de la petición al webservice
         let headers: HTTPHeaders = ["Content-Type": "application/x-www-form-urlencoded"]
         
+        //Método de la petición al webservice, respuesta decodificada de tipo PerfilMascota
         AF.request(url, method: .post, parameters: parameters, headers: headers).validate().responseDecodable(of: PerfilMascota.self) { (response) in
             print(response.result)
             
+            //Habilita o deshabilita botones de horario, audio y editar perfil dependiendo si hay o no una mascota registrada
             let disableEditProfileButton = response.value?.tipo ?? ""
             print(disableEditProfileButton)
             if disableEditProfileButton == "" {
@@ -93,6 +104,7 @@ class MenuPrincipalViewController: UIViewController {
         }
     }
     
+    //Método para preparar segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let identifier = segue.identifier, identifier == "MenuPrincipalToTipoMascota" {
@@ -145,5 +157,5 @@ class MenuPrincipalViewController: UIViewController {
         //        }
         
     }
-
+    
 }

@@ -2,12 +2,14 @@
 //  PerfilMascota.swift
 //  DALMApp
 //
-//  Created by Marco Acosta on 29/05/20.
+//  Created by Marco Acosta on 29/02/20.
 //  Copyright © 2020 DALMApp. All rights reserved.
 //
 
+//Modelo para decodificar la respuesta del webservice del horario
 import Foundation
 
+//struct de perfil de la mascota
 struct PerfilMascota: Decodable {
     
     let exito: String
